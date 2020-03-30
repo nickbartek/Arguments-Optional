@@ -1,0 +1,23 @@
+function addTogether(a,b) {
+let x=typeof a
+let y=typeof b   //typ of arguments
+let leng=arguments.length    //number of argumment
+ console.log(leng,x,y,Number.isInteger(a))
+if(Number.isInteger(a) && Number.isInteger(b))return a+b//     (2 argument) for example (2,3)
+
+if(!Number.isInteger(a))return undefined     //if first argument===false
+
+ if(leng==1 && (Number.isInteger(a)))         //  2 argument in two bracket (2)(3)
+ return function(arg){
+   let result=0
+   console.log("argum----",Number.isInteger(arg),a,arg)
+ if(Number.isInteger(arg)){return result=arg+a}
+ }
+   
+ 
+function check(num){
+  console.log(Number.isInteger(arguments[0]))
+  return Number.isInteger(arguments[0])}
+//check(arguments[0])
+}
+addTogether(2)(3)
