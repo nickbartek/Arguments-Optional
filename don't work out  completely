@@ -1,0 +1,30 @@
+function addTogether(a,b) {
+let x=typeof arguments[0]
+ let y=typeof arguments[1]   //typ of arguments
+ let leng=arguments.length    //number of argumment
+ console.log(arguments[0],arguments[1],x,y,Number.isInteger(arguments[1]))
+ console.log(leng)
+ //if(arguments[0] || arguments[1])
+   if(x==="number" && Number.isInteger(arguments[1])){return arguments[0]+arguments[1]}
+   if(x==="number" && y!=="number"){
+   //console.log("last",x,y)
+   let c=arguments[0]
+   
+   
+   return function(arg){  //if only one argumet is given run function
+             //console.log("funkc",c,arg,c+arg,typeof arg, typeof c)
+      let i=typeof c
+      let j=typeof arg
+      //console.log(i,j)
+      //console.log(Number.isInteger(arg))
+     if(Number.isInteger(arg)){  //arg==="number"
+     let k=c+arg 
+      console.log("kkkkkkkkkk",k,c,arg)
+     return k}
+     else if(!Number.isInteger(arg))return undefined
+       }
+   } 
+    //console.log(typeof arguments[0],typeof arguments[1])
+   return undefined
+}
+addTogether(2,"3")
